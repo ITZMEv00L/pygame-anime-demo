@@ -54,6 +54,7 @@ class player():
 		if self.walking==True and self.dir==1:
 			self.x+=self.walk_speed
 			self.image=self.image_left
+		#动画播放
 		if self.stateN==0:
 			self.play_anime(self.stateN,3,60)
 		if self.stateN==1:

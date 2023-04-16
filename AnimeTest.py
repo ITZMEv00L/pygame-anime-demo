@@ -22,7 +22,7 @@ player=player(player_left_image,player_right_image,screen)
 
 
 def control():
-	#self.KeyCode=-1 
+	#KeyCode=-1 
 	for event in pygame.event.get():
 		if event.type == QUIT:
 			pygame.quit()
@@ -42,7 +42,11 @@ def control():
 				pygame.quit()
 				sys.exit()
 		if event.type==KEYUP:
-			if event.key==K_LEFT or K_RIGHT:
+			if event.key==K_LEFT :
+				player.walking=False
+				player.dir=-1
+				player.stateN=0
+			if event.key==K_RIGHT:
 				player.walking=False
 				player.dir=-1
 				player.stateN=0
@@ -56,8 +60,3 @@ while True:
 	pygame.display.update() #刷新窗口
 	
 	
-	# for i in range(10):
-		# i+=1
-		# if i>=10:
-			# print(FPSClock)
-			# i=0
